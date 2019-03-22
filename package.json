@@ -1,0 +1,57 @@
+{
+  "name": "@barbuza/reach-router-redux",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "module": "esm5/index.js",
+  "es2015": "es2015/index.js",
+  "license": "MIT",
+  "sideEffects": false,
+  "files": [
+    "es5",
+    "esm5",
+    "es2015"
+  ],
+  "scripts": {
+    "clean": "rimraf es5 esm5 es2015",
+    "build": "npm run clean && npm run build:es5 && npm run build:esm5 && npm run build:es2015",
+    "build:es5": "tsc -t es5 --outDir es5 -m commonjs",
+    "build:esm5": "tsc -t es5 --outDir esm5 -m es2015",
+    "build:es2015": "tsc -t es2015 --outDir es2015 -m es2015",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "lens.ts": "^0.5.1",
+    "query-string": "^6.4.0",
+    "shallowequal": "^1.1.0"
+  },
+  "peerDependencies": {
+    "@reach/router": "^1.2.1",
+    "react": ">=15.0.0",
+    "react-redux": ">=6.0.0",
+    "redux": ">=4.0.0"
+  },
+  "devDependencies": {
+    "@types/reach__router": "^1.2.3",
+    "@types/react": "^16.8.8",
+    "@types/react-dom": "^16.8.3",
+    "@types/react-helmet": "^5.0.8",
+    "@types/react-redux": "^7.0.5",
+    "@types/redux-logger": "^3.0.7",
+    "@types/shallowequal": "^1.1.1",
+    "react": ">=15.0.0",
+    "react-redux": "^6.0.1",
+    "redux": ">=4.0.0",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.3.4000"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true
+  }
+}
