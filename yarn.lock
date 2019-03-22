@@ -154,11 +154,6 @@ invariant@^2.2.4:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-lens.ts@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/lens.ts/-/lens.ts-0.5.1.tgz#957cd81838ea7359b0c280f24f9478bc6e92bafc"
-  integrity sha1-lXzYGDjqc1mwwoDyT5R4vG6Suvw=
-
 lodash-es@^4.2.1:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.11.tgz#145ab4a7ac5c5e52a3531fb4f310255a152b4be0"

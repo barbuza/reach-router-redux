@@ -21,7 +21,6 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "lens.ts": "^0.5.1",
     "query-string": "^6.4.0",
     "shallowequal": "^1.1.0"
   },

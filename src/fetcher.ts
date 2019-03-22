@@ -2,11 +2,11 @@ import { AnyAction, MiddlewareAPI, Dispatch, Middleware } from 'redux';
 import { HistoryLocation } from '@reach/router';
 import { match } from '@reach/router/es/lib/utils';
 import shallowEqual from 'shallowequal';
-import { LensImpl } from 'lens.ts';
 import { ParsedQuery } from 'query-string';
 import { connect } from 'react-redux';
 
 import { IDLE, LOADING } from './const';
+import { LensLike } from './lens';
 
 export type MatchParams = {
   [key: string]: string | undefined;
@@ -24,8 +24,8 @@ export abstract class BaseFetcher<State, Params extends {}, Data extends {}> {
   abstract fetch(params: Params, api: MiddlewareAPI<Dispatch, State>): Promise<Data>;
   abstract getParams(state: State, params: MatchParams, query: ParsedQuery): Params;
 
-  abstract dataLens: LensImpl<State, typeof IDLE | typeof LOADING | Data>;
-  abstract paramsLens: LensImpl<State, Params | undefined>;
+  abstract dataLens: LensLike<State, typeof IDLE | typeof LOADING | Data>;
+  abstract paramsLens: LensLike<State, Params | undefined>;
 
   abstract get triggerActions(): any[];
 
